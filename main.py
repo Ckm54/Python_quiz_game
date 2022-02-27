@@ -10,5 +10,6 @@ for question in question_data:
     question_database.append(new_question)
 
 quiz = QuizBrain(question_database)
-quiz.next_question()
+while quiz.still_has_questions():
+    quiz.next_question()
 
